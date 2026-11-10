@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "tema": "Manutenção e Bateria",
+    "subtema": "Garantia e Vida Útil",
+    "palavras_chave": ["garantia", "bateria", "vida util", "durabilidade", "anos", "km"],
+    "pergunta_referencia": "Qual a garantia padrão da bateria de um carro elétrico?",
+    "orientacao_resumida": "A maioria dos fabricantes concede garantia de 8 anos ou de 150.000 km a 160.000 km para o conjunto de tração/bateria, assegurando capacidade de retenção energética de no mínimo 70%.",
+    "referencia_consultada": "Manuais Técnicos de Fabricantes Homologados / ABVE",
+    "data_verificacao": "2026-03-10",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 2,
+    "tema": "Manutenção e Bateria",
+    "subtema": "Degradação e Boas Práticas",
+    "palavras_chave": ["degradacao", "saude da bateria", "viciar", "limite de carga", "80%"],
+    "pergunta_referencia": "A bateria vicia ou degrada rápido com o passar do tempo?",
+    "orientacao_resumida": "As baterias de íon-lítio automotivas não sofrem de efeito memória (não viciam). A taxa de degradação média é de 1,5% a 2,3% ao ano. Para prolongar a vida útil, recomenda-se manter a carga entre 20% e 80% no cotidiano.",
+    "referencia_consultada": "Estudo de Frotas Elétricas Recurrent Auto / Relatório ABVE",
+    "data_verificacao": "2026-02-15",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 3,
+    "tema": "Manutenção e Bateria",
+    "subtema": "Segurança e Risco Térmico",
+    "palavras_chave": ["incendio", "fogo", "risco", "seguranca", "explosao"],
+    "pergunta_referencia": "Existe alto risco de incêndio espontâneo em veículos elétricos?",
+    "orientacao_resumida": "Estatísticas de trânsito internacionais comprovam que a incidência de incêndios por 100 mil veículos é significativamente menor em VEs do que em veículos a combustão. Os packs utilizam isolamento celular e arrefecimento ativo.",
+    "referencia_consultada": "National Transportation Safety Board (NTSB)",
+    "data_verificacao": "2026-01-20",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 4,
+    "tema": "Manutenção e Bateria",
+    "subtema": "Itens de Revisão Periódica",
+    "palavras_chave": ["manutencao", "oleo", "revisao", "correia", "pecas"],
+    "pergunta_referencia": "Quais peças demandam revisão em um carro 100% elétrico?",
+    "orientacao_resumida": "Carros elétricos eliminam trocas de óleo, filtros de combustível, velas e correias dentadas. O plano preventivo inspeciona fluido de freio, fluido de arrefecimento da bateria, suspensão, pneus e filtro do ar-condicionado.",
+    "referencia_consultada": "Plano de Manutenção Preventiva - Sindipeças / ABVE",
+    "data_verificacao": "2026-02-28",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 5,
+    "tema": "Manutenção e Bateria",
+    "subtema": "Comportamento em Alagamentos",
+    "palavras_chave": ["chuva", "agua", "enchente", "alagamento", "choque"],
+    "pergunta_referencia": "É seguro dirigir ou recarregar o carro elétrico em caso de chuva ou alagamento?",
+    "orientacao_resumida": "Sim. Os módulos de bateria e motores de alta tensão têm certificação de blindagem IP67 ou superior. Em caso de qualquer anomalia ou fuga elétrica, relés de segurança desligam o sistema em milissegundos.",
+    "referencia_consultada": "Norma Internacional IEC 61851 / ABNT NBR 17019",
+    "data_verificacao": "2026-03-01",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 6,
+    "tema": "Manutenção e Bateria",
+    "subtema": "Reciclagem e Logística Reversa",
+    "palavras_chave": ["reciclagem", "descarte", "segunda vida", "meio ambiente", "ibama"],
+    "pergunta_referencia": "O que acontece com a bateria quando ela perde a vida útil automotiva?",
+    "orientacao_resumida": "Baterias com retenção inferior a 70% são destinadas a aplicações estacionárias de 'segunda vida' (armazenamento solar/eólico). Após o descarte final, os metais nobres passam por reciclagem obrigatória por logística reversa.",
+    "referencia_consultada": "Política Nacional de Resíduos Sólidos (Lei nº 12.305/2010) / IBAMA",
+    "data_verificacao": "2026-01-15",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 7,
+    "tema": "Infraestrutura e Recarga",
+    "subtema": "Recarga em Tomada Doméstica",
+    "palavras_chave": ["tomada comum", "tomada 110v", "220v", "carregador portatil", "tempo de carga"],
+    "pergunta_referencia": "Posso carregar meu veículo em qualquer tomada residencial comum?",
+    "orientacao_resumida": "O carregador portátil de emergência (10A/16A) pode ser usado, mas a recarga leva de 20h a 40h e exige aterramento adequado e fiação dedicada dimensionada (mínimo 2,5 mm²) para evitar superaquecimento.",
+    "referencia_consultada": "Cartilha de Segurança para Recarga de VEs - Corpo de Bombeiros / ABNT",
+    "data_verificacao": "2026-02-10",
+    "exige_confirmacao_adicional": true
+  },
+  {
+    "id": 8,
+    "tema": "Infraestrutura e Recarga",
+    "subtema": "Wallbox Residencial",
+    "palavras_chave": ["wallbox", "carregador de parede", "7kw", "potencia", "instalacao"],
+    "pergunta_referencia": "Quais as vantagens de instalar um carregador do tipo Wallbox?",
+    "orientacao_resumida": "O Wallbox residencial fornece entre 7,4 kW e 22 kW de potência, completando a recarga em 4 a 8 horas com circuitos de proteção dedicados contra surtos elétricos.",
+    "referencia_consultada": "Norma Brasileira ABNT NBR 5410 / NBR 17019",
+    "data_verificacao": "2026-03-05",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 9,
+    "tema": "Infraestrutura e Recarga",
+    "subtema": "Normas em Condomínios (ANEEL)",
+    "palavras_chave": ["condominio", "predio", "garagem coletiva", "sindico", "autorizacao", "aneel"],
+    "pergunta_referencia": "O síndico pode proibir a instalação de carregador na minha vaga de condomínio?",
+    "orientacao_resumida": "A jurisprudência e a ANEEL amparam a instalação individual conectada ao medidor privativo do apartamento ou com submedição individualizada comprovada por ART de engenharia, rateando apenas a energia gasta pelo usuário.",
+    "referencia_consultada": "Resolução Normativa ANEEL nº 1.000/2021",
+    "data_verificacao": "2026-02-18",
+    "exige_confirmacao_adicional": true
+  },
+  {
+    "id": 10,
+    "tema": "Infraestrutura e Recarga",
+    "subtema": "Padrões de Conectores no Brasil",
+    "palavras_chave": ["conector", "plugue", "tipo 2", "ccs2", "chademo", "gbt"],
+    "pergunta_referencia": "Quais são os tipos de plugues e conectores adotados no Brasil?",
+    "orientacao_resumida": "O mercado brasileiro adotou o conector Tipo 2 (Mennekes) como padrão predominante para corrente alternada (AC) e o CCS2 para carregamento rápido e ultrarrápido em corrente contínua (DC).",
+    "referencia_consultada": "Comissão Técnica de Eletromobilidade da SAE Brasil",
+    "data_verificacao": "2026-01-25",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 11,
+    "tema": "Infraestrutura e Recarga",
+    "subtema": "Carregamento Rápido em Rodovias",
+    "palavras_chave": ["eletroposto", "carga rapida", "dc", "estrada", "viagem"],
+    "pergunta_referencia": "Como funciona o abastecimento rápido em rodovias?",
+    "orientacao_resumida": "Estações rápidas DC (50 kW a 150 kW) injetam energia contínua diretamente na bateria, elevando o nível de 20% a 80% em 25 a 45 minutos. Indicado principalmente para viagens.",
+    "referencia_consultada": "Mapeamento de Eletropostos Rodoviários ABVE",
+    "data_verificacao": "2026-03-02",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 12,
+    "tema": "Infraestrutura e Recarga",
+    "subtema": "Aplicativos de Localização de Postos",
+    "palavras_chave": ["aplicativo", "onde carregar", "mapa", "achar posto", "plugshare"],
+    "pergunta_referencia": "Como localizar postos públicos de recarga?",
+    "orientacao_resumida": "Plataformas como PlugShare e aplicativos das concessionárias de energia exibem mapas em tempo real com conectores disponíveis, potência entregue e preço por kWh.",
+    "referencia_consultada": "Plataforma Aberta de Mobilidade Elétrica / ABVE",
+    "data_verificacao": "2026-02-22",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 13,
+    "tema": "Custo-Benefício e Tributação",
+    "subtema": "Custo por Quilômetro Rodado",
+    "palavras_chave": ["economia", "custo km", "gasolina", "combustivel", "gasto"],
+    "pergunta_referencia": "Quanto se economiza rodando com eletricidade comparado à gasolina?",
+    "orientacao_resumida": "O custo por km em veículos elétricos varia entre R$ 0,12 e R$ 0,18, enquanto em veículos flex a combustão varia entre R$ 0,50 e R$ 0,70, gerando economia aproximada de 70% a 75% em combustível.",
+    "referencia_consultada": "Programa Brasileiro de Etiquetagem Veicular (PBEV) / Inmetro",
+    "data_verificacao": "2026-03-08",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 14,
+    "tema": "Custo-Benefício e Tributação",
+    "subtema": "Isenção e Redução de IPVA",
+    "palavras_chave": ["ipva", "imposto", "isencao", "desconto", "tributo"],
+    "pergunta_referencia": "Carro elétrico tem isenção total de IPVA em todo o Brasil?",
+    "orientacao_resumida": "A regra é estadual: DF, PR e RS oferecem isenção integral; RJ possui alíquota reduzida de 0,5%; SP adota políticas de restituição da cota municipal ou incentivos graduais definidos pela SEFAZ estadual.",
+    "referencia_consultada": "Legislação Tributária Estadual - SEFAZ dos Estados",
+    "data_verificacao": "2026-03-01",
+    "exige_confirmacao_adicional": true
+  },
+  {
+    "id": 15,
+    "tema": "Custo-Benefício e Tributação",
+    "subtema": "Dispensa de Rodízio Municipal (SP)",
+    "palavras_chave": ["rodizio", "sao paulo", "restricao de circulacao", "transito", "cet"],
+    "pergunta_referencia": "Carro elétrico é liberado do rodízio veicular na capital de São Paulo?",
+    "orientacao_resumida": "Sim. Pela Lei Municipal nº 15.997/2014, veículos 100% elétricos e híbridos com placas cadastradas no DSV/CET têm circulação liberada no rodízio de São Paulo todos os dias da semana.",
+    "referencia_consultada": "Secretaria Municipal de Mobilidade Urbana (SMT) / Prefeitura de SP",
+    "data_verificacao": "2026-01-10",
+    "exige_confirmacao_adicional": true
+  },
+  {
+    "id": 16,
+    "tema": "Custo-Benefício e Tributação",
+    "subtema": "Depreciação e Valor Residual",
+    "palavras_chave": ["desvalorizacao", "depreciacao", "revenda", "mercado", "seminovo"],
+    "pergunta_referencia": "Carros elétricos perdem mais valor na revenda do que modelos a combustão?",
+    "orientacao_resumida": "Após uma fase inicial de oscilação decorrente da queda de preço dos modelos zero-km, a curva de depreciação vem se estabilizando à medida que o mercado de usados ganha maturidade e confiança nas garantias.",
+    "referencia_consultada": "Relatórios de Mercado e Precificação FIPE / Mobiauto",
+    "data_verificacao": "2026-02-14",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 17,
+    "tema": "Custo-Benefício e Tributação",
+    "subtema": "Substituição Modular de Bateria",
+    "palavras_chave": ["troca de bateria", "preco bateria", "bateria nova", "reparo"],
+    "pergunta_referencia": "Se a bateria apresentar defeito fora da garantia, é obrigatório trocar o conjunto inteiro?",
+    "orientacao_resumida": "Não necessariamente. As oficinas especializadas e montadoras adotam reparo modular, trocando somente as células ou módulos defeituosos, reduzindo os custos de intervenção em mais de 70%.",
+    "referencia_consultada": "Câmara de Eletromobilidade do Sindipeças",
+    "data_verificacao": "2026-02-05",
+    "exige_confirmacao_adicional": false
+  },
+  {
+    "id": 18,
+    "tema": "Custo-Benefício e Tributação",
+    "subtema": "Ponto de Equilíbrio (Payback)",
+    "palavras_chave": ["payback", "ponto de equilibrio", "vale a pena", "quilometragem anual", "calculo"],
+    "pergunta_referencia": "A partir de quantos quilômetros rodados anuais compensa financeiramente comprar um elétrico?",
+    "orientacao_resumida": "Devido à economia de combustível e revisões, o retorno do investimento (payback) ocorre entre 35.000 km e 50.000 km rodados, sendo ideal para quem roda mais de 15.000 km por ano.",
+    "referencia_consultada": "Estudo de Custo Total de Propriedade (TCO) - FGV Energia",
+    "data_verificacao": "2026-03-12",
+    "exige_confirmacao_adicional": false
+  }
+]
