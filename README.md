@@ -3,6 +3,7 @@ repositorio para desenvolvimento do global solution. Criamos um suporte automati
 
 # Integrante (nome, RM)
 Gabriel da silva amaral rm570421
+
 Enzo Miguel de Oliveira Silva rm571639
 
 # Documentação da Base de Conhecimento, Fontes Verificadas e Privacidade
