@@ -26,3 +26,39 @@ O Citizen Assist AI foi construído exclusivamente sobre normas técnicas brasil
 Em total conformidade com o edital do desafio CitizenTech:
 - **Zero Coleta de Dados Pessoais:** O sistema opera sob o princípio da minimização. Em nenhum momento o usuário precisa fornecer CPF, nome, placa do veículo, e-mail ou localização precisa via GPS.
 - **Transparência e Caráter Não-Oficial:** O assistente declara formalmente em seus avisos que atua como ferramenta informativa complementar, orientando o cidadão a verificar decretos e tarifas vigentes junto aos órgãos competentes.
+
+## 3. Como Executar
+Na raiz do projeto:
+
+    python3 src/sistema.py          # inicia o assistente no terminal
+    python3 src/teste_sistema.py    # roda os testes automáticos
+
+Requisito: Python 3.8+ (usa apenas a biblioteca padrão).
+
+## 4. Estrutura do Projeto
+    data/base_conhecimento.json   # base com 18 registros em 3 temas
+    src/gerenciador_dados.py      # Parte 1: carga, validação e persistência
+    src/sistema.py                # Parte 2: índices, busca, menu e prompts
+    src/teste_sistema.py          # testes automáticos
+
+## 5. Funcionamento do Sistema
+- **Estruturas de dados:** dicionários para busca por ID, por tema e por palavra-chave
+  (índice invertido), além de uma árvore tema > subtema.
+- **Busca:** o texto é normalizado (sem acentos e sem palavras comuns) e cada registro
+  recebe uma pontuação (palavra-chave, subtema, pergunta e orientação). Com um vencedor
+  claro, o sistema responde direto; com resultados parecidos, pede ao usuário que escolha
+  entre as opções (desambiguação); sem resultado, exibe aviso.
+- **Navegação continuada:** um grafo liga assuntos relacionados (inclusive entre temas) e
+  sugere os próximos assuntos após cada resposta.
+- **Modelos de resposta:**
+  - **Modelo A (Direto/Técnico):** objetivo, com fonte, data de verificação e aviso curto.
+  - **Modelo B (Didático/Cidadão):** linguagem simples, repete a dúvida do usuário e
+    sempre exibe o aviso legal completo.
+- **Alertas:** registros que dependem de legislação local exibem pedido de confirmação
+  com o órgão competente. Entradas inválidas e assuntos fora da base também geram aviso.
+
+## 6. Limitações
+- A base cobre apenas os temas cadastrados; cada registro tem data de verificação e a
+  informação pode ter mudado desde então.
+- A aplicação é informativa e não substitui órgãos oficiais, fabricantes,
+  concessionárias de energia ou profissionais habilitados.
