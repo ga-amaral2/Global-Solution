@@ -1,14 +1,23 @@
-# Global-Solution
-repositorio para desenvolvimento do global solution. Criamos um suporte automatico para responder duvidas sobre carro eletrico
+# Global Solution - Citizen Tech
+Assistente digital desenvolvido para a Global Solution 2026.2, com o objetivo de facilitar o acesso do cidadão a informações confiáveis e verificadas sobre carros elétricos, recarga e tributação.
 
-# Integrante (nome, RM)
-Gabriel da silva amaral rm570421
+## Integrantes
+- Gabriel da Silva Amaral rm570421
+- Enzo Miguel de Oliveira Silva rm571639
+- Pedro Aulicino Corrêa Coelho rm570804
 
-Enzo Miguel de Oliveira Silva rm571639
+---
 
-# Documentação da Base de Conhecimento, Fontes Verificadas e Privacidade
+## 1. Descrição do Problema, Público-Alvo e Temas Abordados
+Donos ou pessoas interessadas em veículos elétricos frequentemente encontram informações dispersas, termos técnicos complexos ou regras que variam por estado e município. O assistente organiza **18 orientações verificadas** divididas em **3 temas principais**:
 
-## 1. Origem e Critérios de Confiabilidade das Fontes
+1. **Manutenção e Bateria:** garantia padrão, degradação e boas práticas (20%–80%), segurança térmica, itens de revisão periódica, comportamento em alagamentos e reciclagem/logística reversa.
+2. **Infraestrutura e Recarga:** recarga em tomada doméstica, Wallbox residencial, normas da ANEEL em condomínios, padrões de conectores no Brasil (Tipo 2 e CCS2), carregamento rápido em rodovias e aplicativos de localização.
+3. **Custo-Benefício e Tributação:** custo por quilômetro rodado, regras estaduais de IPVA, dispensa do rodízio municipal em São Paulo, depreciação/valor residual, substituição modular de bateria e ponto de equilíbrio (*payback*).
+
+---
+
+## 2. Origem e Critérios de Confiabilidade das Fontes
 O Citizen Assist AI foi construído exclusivamente sobre normas técnicas brasileiras, decretos estaduais/municipais e relatórios técnicos consolidados de entidades do setor:
 
 1. **Associação Brasileira do Veículo Elétrico (ABVE) / SAE Brasil:**
@@ -22,26 +31,47 @@ O Citizen Assist AI foi construído exclusivamente sobre normas técnicas brasil
 5. **Legislação Ambiental e Segurança Técnica (ABNT / IBAMA):**
    - Lei Federal nº 12.305/2010 (logística reversa e reciclagem de baterias) e normas ABNT NBR 5410 / NBR 17019 para segurança de instalações elétricas de recarga.
 
-## 2. Princípios de Privacidade e Tratamento de Dados (LGPD)
+---
+
+## 3. Princípios de Privacidade e Tratamento de Dados (LGPD)
 Em total conformidade com o edital do desafio CitizenTech:
 - **Zero Coleta de Dados Pessoais:** O sistema opera sob o princípio da minimização. Em nenhum momento o usuário precisa fornecer CPF, nome, placa do veículo, e-mail ou localização precisa via GPS.
 - **Transparência e Caráter Não-Oficial:** O assistente declara formalmente em seus avisos que atua como ferramenta informativa complementar, orientando o cidadão a verificar decretos e tarifas vigentes junto aos órgãos competentes.
 
-## 3. Como Executar
-Na raiz do projeto:
-
-    python3 src/sistema.py          # inicia o assistente no terminal
-    python3 src/teste_sistema.py    # roda os testes automáticos
-
-Requisito: Python 3.8+ (usa apenas a biblioteca padrão).
+---
 
 ## 4. Estrutura do Projeto
-    data/base_conhecimento.json   # base com 18 registros em 3 temas
-    src/gerenciador_dados.py      # Parte 1: carga, validação e persistência
-    src/sistema.py                # Parte 2: índices, busca, menu e prompts
-    src/teste_sistema.py          # testes automáticos
+```text
+├── data/
+│   └── base_conhecimento.json   # Base estruturada com 18 registros em 3 temas
+├── docs/
+│   ├── plano_testes.md          # Metodologia, resultados das 12 consultas, User Test e melhorias
+│   └── uso_ia.md                # Registro do uso de IA
+├── src/
+│   ├── gerenciador_dados.py     # Carga, validação e persistência da base JSON
+│   ├── sistema.py               # Índices, busca, grafo, prompts e menu no terminal
+│   ├── teste_sistema.py         # Testes unitários de integridade estrutural e grafo
+│   └── avaliacao.py             # Bateria das 12 perguntas e cálculo de indicadores
+└── README.md                    # Documentação geral do projeto
+```
 
-## 5. Funcionamento do Sistema
+---
+
+## 5. Como Executar
+Na raiz do projeto:
+
+```bash
+python src/sistema.py          # inicia o assistente interativo no terminal
+python src/avaliacao.py        # executa as 12 consultas de teste e calcula os indicadores
+python src/teste_sistema.py    # roda os testes unitários de integridade da estrutura
+```
+
+Requisito: **Python 3.8+** (usa apenas a biblioteca padrão).
+
+---
+
+
+## 6. Funcionamento do Sistema
 - **Estruturas de dados:** dicionários para busca por ID, por tema e por palavra-chave
   (índice invertido), além de uma árvore tema > subtema.
 - **Busca:** o texto é normalizado (sem acentos e sem palavras comuns) e cada registro
@@ -57,8 +87,71 @@ Requisito: Python 3.8+ (usa apenas a biblioteca padrão).
 - **Alertas:** registros que dependem de legislação local exibem pedido de confirmação
   com o órgão competente. Entradas inválidas e assuntos fora da base também geram aviso.
 
-## 6. Limitações
-- A base cobre apenas os temas cadastrados; cada registro tem data de verificação e a
+---
+
+## 7. Exemplos de Funcionamento
+
+### Exemplo 1 — Consulta válida com confirmação adicional (Modelo B)
+**Entrada:** `Carro elétrico paga IPVA?`
+
+```text
+================================================================
+[MODELO B - DIDÁTICO]  Custo-Benefício e Tributação > Isenção e Redução de IPVA
+  Sua dúvida: "Carro elétrico tem isenção total de IPVA em todo o Brasil?"
+
+  Em linguagem simples: A regra é estadual: DF, PR e RS oferecem isenção
+  integral; RJ possui alíquota reduzida de 0,5%; SP adota políticas de
+  restituição da cota municipal ou incentivos graduais definidos pela SEFAZ
+  estadual.
+
+  Onde conferir: Legislação Tributária Estadual - SEFAZ dos Estados
+  (informação verificada em 01/03/2026).
+
+  ATENÇÃO: este assunto depende de legislação/normas que mudam por estado,
+  município ou condomínio. Confirme com o órgão competente (SEFAZ, prefeitura,
+  ANEEL, distribuidora ou convenção do condomínio).
+
+  AVISO: esta aplicação tem caráter informativo e NÃO substitui órgãos
+  oficiais, fabricantes, concessionárias de energia, prefeituras ou
+  profissionais habilitados. Confirme sempre nas fontes oficiais antes de
+  tomar decisões.
+================================================================
+```
+
+### Exemplo 2 — Entrada vazia / inválida ou tema fora da base
+- **Entrada vazia (`""`) ou numérica (`"123"`):**
+  `Entrada inválida: digite ao menos uma palavra com 3 letras ou mais (sem apenas números ou símbolos).`
+- **Assunto fora dos temas (`"financiamento imobiliário caixa"`):**
+  `Não encontrei esse assunto na base de conhecimento. Tente outras palavras (ex.: 'bateria', 'wallbox', 'IPVA') ou use a navegação por temas.`
+
+---
+
+## 8. Plano de Testes e Indicadores de Desempenho
+A avaliação completa está documentada em [`docs/plano_testes.md`](docs/plano_testes.md) e automatizada em `src/avaliacao.py`.
+
+- **Total de perguntas testadas:** 12 (6 diretas, 4 variações de frase e 2 fora do escopo)
+- **Respostas corretas:** 9
+- **Taxa de Acerto:** **75,0%**
+- **Tempo Médio de Consulta:** **0,100 ms**
+- **Cenários de limitação validados:** entrada vazia (`ENTRADA_INVALIDA`), consulta ambígua com `"bateria"` (`AMBIGUO`) e tema inexistente (`NAO_ENCONTRADO`).
+- **Teste de Facilidade de Uso (User Test):** realizado com usuário externo, concluindo tarefas de busca livre, navegação por temas e encadeamento via grafo em menos de 2 minutos.
+
+---
+
+## 9. Conclusões, Limitações e Melhorias Futuras
+- **Conclusões:** a combinação de índices invertidos em dicionários, árvore temática e grafo de navegação permitiu respostas instantâneas (< 1 ms) e transparentes, garantindo rastreabilidade das fontes sem depender de APIs externas.
+- **Limitações:** 
+  - A busca léxica baseada em radicais simples (5 primeiras letras) e `LIMIAR_MINIMO = 2.0` gerou falsos positivos em 2 consultas fora do escopo (`"segunda via"` coincidindo com `"segunda vida"` e `"valor da multa"` coincidindo com `"valor residual"`) e falhou em 1 variação sem sinônimo cadastrado (`"investimento"` para *payback*).
+  - A base cobre apenas os temas cadastrados; cada registro tem data de verificação e a
   informação pode ter mudado desde então.
-- A aplicação é informativa e não substitui órgãos oficiais, fabricantes,
+  - A aplicação é informativa e não substitui órgãos oficiais, fabricantes,
   concessionárias de energia ou profissionais habilitados.
+- **Melhorias propostas:**
+  1. Elevar `LIMIAR_MINIMO` de `2.0` para `3.0` para evitar respostas baseadas em apenas uma coincidência fraca.
+  2. Expandir a lista de *stopwords* com termos genéricos (como `"valor"` e `"segunda"`) e adicionar sinônimos às palavras-chave da base.
+  3. Salvar um histórico das perguntas sem resposta em um arquivo `.log` para facilitar a expansão futura da base de conhecimento.
+
+---
+
+## 10. Vídeo de Apresentação
+- **Link no YouTube:** [LINK_DO_YOUTUBE_AQUI]
