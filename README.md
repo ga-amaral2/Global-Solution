@@ -49,7 +49,7 @@ Em total conformidade com o edital do desafio CitizenTech:
 │   └── uso_ia.md                # Registro do uso de IA
 ├── src/
 │   ├── gerenciador_dados.py     # Carga, validação e persistência da base JSON
-│   ├── sistema.py               # Índices, busca, grafo, prompts e menu no terminal
+│   ├── system.py               # Índices, busca, grafo, prompts e menu no terminal
 │   ├── teste_sistema.py         # Testes unitários de integridade estrutural e grafo
 │   └── avaliacao.py             # Bateria das 12 perguntas e cálculo de indicadores
 └── README.md                    # Documentação geral do projeto
@@ -61,7 +61,7 @@ Em total conformidade com o edital do desafio CitizenTech:
 Na raiz do projeto:
 
 ```bash
-python src/sistema.py          # inicia o assistente interativo no terminal
+python src/system.py          # inicia o assistente interativo no terminal
 python src/avaliacao.py        # executa as 12 consultas de teste e calcula os indicadores
 python src/teste_sistema.py    # roda os testes unitários de integridade da estrutura
 ```
@@ -154,4 +154,4 @@ A avaliação completa está documentada em [`docs/plano_testes.md`](docs/plano_
 ---
 
 ## 10. Vídeo de Apresentação
-- **Link no YouTube:** [LINK_DO_YOUTUBE_AQUI]
+- **Link no YouTube:** https://youtu.be/mkvSwyfh8Zs
